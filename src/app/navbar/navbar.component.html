@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+  <a class="navbar-brand" [routerLink]="['']" [routerLinkActive]="['active']"
+    >Projeto Bolsa</a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          aria-current="page"
+          [routerLink]="['']"
+          [routerLinkActive]="['active']"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['rosangelaCurrency']"
+          [routerLinkActive]="['active']"
+          >Moedas</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['rosangelaWallet']">Minha Carteira</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+<div class="bg-warning">
+<ul>
+  <li>
+    Dólar
+    <i *ngIf="this.bitCoin.getEstadoDolar() == true" class="text-success"
+      >↑</i
+    >
+    <i *ngIf="this.bitCoin.getEstadoDolar() == false" class="text-danger"
+      >↓</i
+    >
+  </li>
+  <li>
+  Euro
+  <i *ngIf="this.bitCoin.getEstadoReal() == true" class="text-success">↑</i>
+  <i *ngIf="this.bitCoin.getEstadoReal() == false" class="text-danger">↓</i>
+</li>
+  <li>
+    Bitcoin
+    <i *ngIf="this.bitCoin.getEstadoReal() == true" class="text-success">↑</i>
+    <i *ngIf="this.bitCoin.getEstadoReal() == false" class="text-danger">↓</i>
+  </li>
+
+</ul>
+</div>
